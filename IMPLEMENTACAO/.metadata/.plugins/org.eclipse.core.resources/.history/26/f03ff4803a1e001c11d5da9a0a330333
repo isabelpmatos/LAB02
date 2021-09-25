@@ -1,0 +1,5 @@
+package com.adc.models;
+
+public class Contrato {
+	private PedidoDeAluguel pedido;
+}

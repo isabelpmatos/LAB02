@@ -1,0 +1,9 @@
+package com.adc.models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PedidoDeAluguel {
+	private List<Automovel> listAutomoveis = new ArrayList();
+	private Cliente cliente;
+}

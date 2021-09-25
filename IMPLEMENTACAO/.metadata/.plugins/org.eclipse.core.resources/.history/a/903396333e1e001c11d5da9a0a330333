@@ -1,0 +1,9 @@
+package com.adc.models;
+
+public class ContratoCredito {
+	private Banco banco;
+	private double valorCredito;
+	private Contrato contrato;
+	
+	
+}

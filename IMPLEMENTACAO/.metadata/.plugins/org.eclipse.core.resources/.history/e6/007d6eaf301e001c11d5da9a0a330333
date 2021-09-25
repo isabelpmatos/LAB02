@@ -1,0 +1,21 @@
+package com.adc.models;
+
+public class AgenteBanco extends Agente {
+	
+	
+	
+	public AgenteBanco(Banco banco) {
+		super();
+		this.banco = banco;
+	}
+
+	private Banco banco;
+
+	public Banco getBanco() {
+		return banco;
+	}
+
+	public void setBanco(Banco banco) {
+		this.banco = banco;
+	}
+}

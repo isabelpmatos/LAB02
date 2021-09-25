@@ -1,0 +1,17 @@
+package com.adc.models;
+
+public class Contrato {
+	private int id;
+	private PedidoDeAluguel pedido;
+	
+	public Contrato() {
+		
+	}
+
+	public Contrato(int id, PedidoDeAluguel pedido) {
+		super();
+		this.id = id;
+		this.pedido = pedido;
+	}
+	
+}

@@ -1,0 +1,15 @@
+package com.adc.models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Cliente extends User {
+	private String rg;
+	private String cpf;
+	private String endereco;
+	private List<String> entidadesEmpregadoras = new ArrayList<>();
+	private List<Double> rendasAuferidas = new ArrayList<>();
+	private double rendaTotal;
+	
+	
+}

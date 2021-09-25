@@ -1,0 +1,12 @@
+package com.adc.models;
+
+public class Automovel {
+	private int ano;
+	private int matricula;
+	private String marca;
+	private String modelo;
+	private String placa;
+	private double preco;
+	
+	
+}
