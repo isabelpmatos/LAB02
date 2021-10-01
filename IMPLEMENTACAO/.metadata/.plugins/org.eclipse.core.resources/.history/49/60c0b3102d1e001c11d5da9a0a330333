@@ -1,8 +1,0 @@
-package com.adc.models;
-
-public class Cliente extends User {
-	private String rg;
-	private String cpf;
-	private String endereco;
-	private List<String> entidadesEmpregadoras = new ArrayList<>();
-}

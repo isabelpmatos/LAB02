@@ -1,8 +1,0 @@
-package com.adc.models;
-
-public class Contrato {
-	private int id;
-	private PedidoDeAluguel pedido;
-	
-	
-}
