@@ -38,7 +38,10 @@ public class AppController {
 	}
 	
 	@GetMapping("/sucesso")
-	public String sucessoPage() {
+	public String sucessoPage(Model model) {
+		List<User> listUsers = userRepo.findAll();
+	    model.addAttribute("listUsers", listUsers);
+		
 		return "success";
 	}
 	
