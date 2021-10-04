@@ -21,9 +21,6 @@ package com.example.demo;
 	    @Column(nullable = false, unique = false, length = 20)
 	    private int ano;
 
-	    @Column(nullable = false, length = 20)
-	    private double preco;
-
 	    @Column(nullable = false, unique= true, length = 20)
 	    private int matricula;
 
@@ -68,14 +65,6 @@ package com.example.demo;
 
 		public void setAno(int ano) {
 			this.ano = ano;
-		}
-
-		public double getPreco() {
-			return preco;
-		}
-
-		public void setPreco(double preco) {
-			this.preco = preco;
 		}
 
 		public int getMatricula() {

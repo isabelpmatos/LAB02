@@ -8,8 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
 
 
 @Controller
@@ -46,23 +46,26 @@ public class AppController {
 	
 	@GetMapping("/sucesso")
 	public String sucessoPage(Model model) {
-		List<User> listUsers = userRepo.findAll();
-	    model.addAttribute("listUsers", listUsers);
+		List<AutomovelModel> listAutomoveis = automovelRepository.findAll();
+	    model.addAttribute("listAutomoveis", listAutomoveis);
 		
-		return "index";
+		return "success";
 	}
 	
 	@GetMapping ("/cadastroautomovel")
 //	method=RequestMethod.GET, value="/cadastroautomovel"
-	public String inicio() {
+	public String inicio(Model model) {
+		model.addAttribute("automovel", new AutomovelModel());
 		return "cadastroautomovel";
 	}
 	
-	@GetMapping  ("/salvarautomovel")
-//	method=RequestMethod.POST, value="/salvarautomovel
-	public String salvar(AutomovelModel automovel) {
+	@PostMapping("/salvarautomovel")
+	public ModelAndView salvar(AutomovelModel automovel) {
 		automovelRepository.save(automovel);
-		return "index";
+		
+		ModelAndView mav = new ModelAndView("success");
+		mav.addObject("listAutomoveis", automovelRepository.findAll());
+		return mav;
 }
 	
 	
