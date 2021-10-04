@@ -42,5 +42,6 @@ public class AppController {
 		return "success";
 	}
 	
+	@PostMapping("/process_aluguel")
 	
 }
