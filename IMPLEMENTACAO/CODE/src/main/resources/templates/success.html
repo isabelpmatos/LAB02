@@ -14,7 +14,7 @@
             <input type="submit" value="Sign Out" />
         </form>
     </div>
-    <div><h3><a th:href="@{/cadastroautomovel}">Cadastro de AutomÃ³vel</a></div>
+    <div><h3><a th:href="@{/cadastroautomovel}">Cadastro de Automóvel</a></div>
     <div>
         <h1>Lista de Automóveis disponíveis</h1>
     </div>
@@ -41,7 +41,7 @@
                     <td th:text="${automovel.placa}">Last Name</td>
                     <td th:text="${automovel.ano}">Last Name</td>
                     <td th:text="${automovel.price}">Last Name</td>
-                    <td><button>ALUGAR</button></td>
+                    <td><a th:href="/@{'/alugar/' + ${automovel.id}}">ALUGAR</a></td>
                 </tr>
             </tbody>
         </table>
